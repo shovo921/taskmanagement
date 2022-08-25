@@ -1,0 +1,64 @@
+body{
+    margin: 0 auto;   
+    padding: 0 auto; 
+    }
+    .from{
+        margin-top: 30px;
+        text-align: center;
+    }
+    input#task {
+        font-size: 20px;
+    }
+    .from button{
+        color: tomato;
+        background: white;
+        padding: 10px 8px;
+        border-color: gray;
+        font-size: 20px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        
+      
+    }
+    
+    .from input{
+        padding: 10px 8px;
+        border-color: gray;
+        font-size: 20px;
+    }
+    .col-md-4 {
+        margin-top: 40px;
+        border: 1px;
+        border-color: gray;
+        height: 300px;
+        text-align: center;
+     
+        
+      
+    }
+    .col-md-4 h2{
+        background: tomato;
+        padding: 10px 0px;
+        border: 1px;
+        border-color: gray;
+        border-style: groove ;
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+    .todo{
+     
+        text-align: center;
+        border-style: groove;
+        /* height: 400px; */
+        padding-bottom: 20px;
+    }
+    .todo ul li {
+        list-style: none;
+        border-style: groove;
+        margin-right: 30px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 25px;
+        background: #Ddd;
+    }
+ 
