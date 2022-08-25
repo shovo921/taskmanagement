@@ -188,7 +188,7 @@ function allData(){
             data=data +' </div>'
             data=data +' <div class="modal-body">'
             data=data +' <select id="selectedid'+value.id+'" class="form-select" aria-label="Select Task Status">'
-            data=data +' <option selected>select your task status</option>'
+            data=data +'   <option selected>select your task status</option>'
             data=data +'   <option value="1">To do</option>'
             data=data +'   <option value="3">Done</option>'
            data=data +' </select>'

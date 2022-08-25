@@ -25,6 +25,10 @@ class TaskController extends Controller
     {
         // $name=$request->name;
         // $status =$request->status;
+        $validated = $request->validate([
+            'taskname' => 'required',
+        
+        ]);
 
         $data =Task::insert([
             'name' =>$request->taskname,
@@ -38,7 +42,11 @@ class TaskController extends Controller
     }
     public function update(Request $request,$id){
 
-    
+
+        $validated = $request->validate([
+            'status' => 'required|numeric',
+        
+        ]);
         $data=Task::findorfail($id)->update([
         'status' =>$request->status,
   
