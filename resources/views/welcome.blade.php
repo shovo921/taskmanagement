@@ -18,6 +18,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <title>Kanban board</title>
 </head>
 <body>
@@ -163,7 +165,7 @@ function allData(){
         url:"/api/get/progress/task",
         success:function(response){
           var data=""
-        //   var i = 1
+        
         
            $.each(response,function(key, value)
            {
@@ -205,6 +207,8 @@ function allData(){
            })
       
            $('#processtask').html(data);
+ 
+           
         }
        
         
@@ -279,6 +283,13 @@ $.ajax({
   url:"/api/inserttask",
   success:function(data){
     console.log('successfully  data added');
+    Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your Task has been saved',
+            showConfirmButton: false,
+            timer: 1500
+            })
   },
   error:function(error){
    console.log(error.responseJSON.errors.email);
@@ -308,6 +319,13 @@ function UpdateData(id) {
     data:{status:selectedid},
     url:"/api/update/"+id,
     success:function(data){
+        Swal.fire({
+            position: 'top-end',
+            icon: 'info',
+            title: 'Your work has been updated',
+            showConfirmButton: false,
+            timer: 1500
+            })
       console.log('data updated');
       allData();
       
